@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Transport</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all"\>
+<script type="text/javascript" src="view.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery-ui.css" />
+  <script src="jquery-1.9.1.js"></script>
+  <script src="jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
+<script>
+  $(function() {
+    $( "#datepicker2" ).datepicker();
+  });
+  </script>
+</head>
+<body id="main_body" >
+	<script language=JavaScript>
+<!--
+
+//Disable right mouse click Script
+//By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="Function Disabled!";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// --> 
+</script>
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Transport</a></h1>
+		<form id="transport" class="appnitro"  method="post" action="newtransport">
+					<div class="form_description">
+			<h2>Transport</h2>
+			<p></p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="Order_no">Order no :
+ </label>
+		<div>
+			<input id="Order_no" name="Order_no" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>
+					<li id="li_2" >
+		<label class="description" for="Truck_no">Truck no :
+ </label>
+		<div>
+			<input id="Truck_no" name="Truck_no" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_3" >
+		<label class="description" for="Driv_name">Driver's name : </label>
+		<div>
+			<input id="Driv_name" name="Driv_name" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_4" >
+		<label class="description" for="Driv_mob">Driver's Mob.no : </label>
+		<div>
+			<input id="Driv_mob" name="Driv_mob" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_5" >
+		<label class="description" for="Driv_lic">Driver's Lic.no : </label>
+		<div>
+			<input id="Driv_lic" name="Driv_lic" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_6" >
+		<label class="description" for="P_tpt_date" >Pick up Date : </label>
+		<div>
+			<input name="P_tpt_date" id="datepicker" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_7" >
+		<label class="description" for="D_tpt_date">Delivery Date : </label>
+		<div>
+			<input name="D_tpt_date" id="datepicker2" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="590069" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+                                <a href="newjsp.jsp"> View orders placed</a
+		</li>
+                          >
+                
+			</ul>
+		</form>	
+		<div id="footer">
+			 <a href="index.html">Logistics Management System</a>
+		</div>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	</body>
+</html>

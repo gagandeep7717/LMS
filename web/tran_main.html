@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Transportform</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+
+</head>
+<body id="main_body" >
+<script language=JavaScript>
+<!--
+
+//Disable right mouse click Script
+
+
+var message="Function Disabled!";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// --> 
+</script>	
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Consumers form</a></h1>
+	  <form id="con_login" class="appnitro"  method="post">
+					<div class="form_description">
+			<h2>Select operation</h2>
+</div>						
+			<ul ><li id="li_1" >
+		<label class="description" for="name"><a href="Transport.html"> Pass transit orders.</a><br />
+		  <br />
+        </label>
+			</li>		
+			<li id="li_2" >
+		<label class="description" for="password"><br />
+		  <a href="update_transit.html">Update transit details.</a></label>
+		<div></div> 
+		</li>
+		<li class="buttons"></li>
+			</ul>
+	  </form>	
+		<div id="footer">
+		<a href="index.html">Logistics Management System.</a>
+		</div>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	</body>
+</html>
